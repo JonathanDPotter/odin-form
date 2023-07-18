@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign-up-form</title>
+    <script src="./bundle.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="image-logo-section">
+      <div class="logo-name">
+        <img
+          src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png"
+          alt="odin logo"
+        />
+        <h1>ODIN</h1>
+      </div>
+    </section>
+    <section class="form-section">
+      <div class="top">
+        <p>
+          This is not a real online service! you know you need something like
+          this in your life to help you realize your deepest dreams.
+        </p>
+        <p>Sign up <em>now</em> to get started</p>
+        <br />
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <form>
+        <div class="form-card">
+          <h2>Let's do this!</h2>
+          <div class="form-fields">
+            <fieldset data-error="Must provide first name.">
+              <label for="first-name">FIRST NAME</label>
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                placeholder="Firstname"
+                pattern=".+"
+                required
+              />
+            </fieldset>
+            <fieldset data-error="Must provide last name.">
+              <label for="last-name">LAST NAME</label>
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                placeholder="Lastname"
+                pattern=".+"
+                required
+              />
+            </fieldset>
+            <fieldset data-error="Must provide valid email address.">
+              <label for="email">EMAIL</label>
+              <input type="email" name="email" id="email" required />
+            </fieldset>
+            <fieldset
+              data-error="Must provide ten digit phone number in format XXX-XXX-XXXX."
+            >
+              <label for="phone-number">PHONE NUMBER</label>
+              <input
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                placeholder="XXX-XXX-XXXX"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required
+                data-error="phone number required in format xxx-xxx-xxxx"
+              />
+            </fieldset>
+            <fieldset
+              data-error="Password must include 8 characters, at least one capital letter and one number."
+            >
+              <label for="password">PASSWORD</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="8chars1capital1number"
+                pattern="^(?=.*\d)(?=.*[A-Z])(.{8,})$"
+                required
+              />
+            </fieldset>
+            <fieldset data-error="Passwords must match.">
+              <label for="confirm-password">CONFIRM PASSWORD</label>
+              <div class="input-button">
+                <input
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  placeholder="passwordsmustmatch"
+                  pattern="^(?=.*\d)(?=.*[A-Z])(.{8,})$"
+                  required
+                />
+                <!-- this button will toggle visibility on the password inputs -->
+                <button
+                  type="button"
+                  id="visibility-button"
+                  title="toggle password visibility"
+                >
+                  <img
+                    src="./assets/eye.png"
+                    alt="eye icon"
+                    id="visibility-icon"
+                  />
+                </button>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <div class="bottom">
+          <button type="submit">Create Account</button>
+          <p>Already have an account? <a>Log in</a></p>
+        </div>
+        <a
+          href="https://www.flaticon.com/free-icons/eye"
+          title="eye icons"
+          class="attribution"
+          >Eye icons created by Gregor Cresnar - Flaticon</a
+        >
+      </form>
+    </section>
+  </body>
+</html>
