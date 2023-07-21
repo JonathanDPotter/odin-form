@@ -36,7 +36,7 @@
         <div class="form-card">
           <h2>Let's do this!</h2>
           <div class="form-fields">
-            <fieldset data-error="Must provide first name.">
+            <fieldset data-error="Required">
               <label for="first-name">FIRST NAME</label>
               <input
                 type="text"
@@ -47,7 +47,7 @@
                 required
               />
             </fieldset>
-            <fieldset data-error="Must provide last name.">
+            <fieldset data-error="Required">
               <label for="last-name">LAST NAME</label>
               <input
                 type="text"
@@ -58,13 +58,11 @@
                 required
               />
             </fieldset>
-            <fieldset data-error="Must provide valid email address.">
+            <fieldset data-error="Valid email required">
               <label for="email">EMAIL</label>
               <input type="email" name="email" id="email" required />
             </fieldset>
-            <fieldset
-              data-error="Must provide ten digit phone number in format XXX-XXX-XXXX."
-            >
+            <fieldset data-error="use format xxx-xxx-xxxx">
               <label for="phone-number">PHONE NUMBER</label>
               <input
                 type="tel"
@@ -73,19 +71,16 @@
                 placeholder="XXX-XXX-XXXX"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 required
-                data-error="phone number required in format xxx-xxx-xxxx"
               />
             </fieldset>
-            <fieldset
-              data-error="Password must include 8 characters, at least one capital letter and one number."
-            >
+            <fieldset data-error="8 characters required">
               <label for="password">PASSWORD</label>
               <input
                 type="password"
                 name="password"
                 id="password"
-                placeholder="8chars1capital1number"
-                pattern="^(?=.*\d)(?=.*[A-Z])(.{8,})$"
+                placeholder="password"
+                pattern=".{8,}"
                 required
               />
             </fieldset>
@@ -97,7 +92,7 @@
                   name="confirm-password"
                   id="confirm-password"
                   placeholder="passwordsmustmatch"
-                  pattern="^(?=.*\d)(?=.*[A-Z])(.{8,})$"
+                  pattern=".{8,}"
                   required
                 />
                 <!-- this button will toggle visibility on the password inputs -->

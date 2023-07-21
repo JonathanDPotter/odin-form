@@ -13,6 +13,7 @@ enum inputState {
 
 const { good, bad } = inputState;
 
+// sets inputs to valid or invalid class
 const toggleClasses = (fieldset: HTMLFieldSetElement, type: inputState) => {
   if (type === bad) {
     fieldset.classList.add("invalid");
@@ -23,6 +24,7 @@ const toggleClasses = (fieldset: HTMLFieldSetElement, type: inputState) => {
   }
 };
 
+// sets an event listener to toggle validity on inputs when they lose focus
 fieldsets.forEach((fieldset) => {
   const input = fieldset.getElementsByTagName("input")[0];
   input.addEventListener("focusout", () => {
@@ -53,3 +55,12 @@ const toggleVisibility = () => {
 
 const visibilityButton = document.getElementById("visibility-button");
 visibilityButton?.addEventListener("click", toggleVisibility);
+
+const handleSubmit = (event: { preventDefault: () => void; }) => {
+  event.preventDefault();
+  
+}
+
+const form = document.getElementsByTagName("form")[0];
+
+form.onsubmit = handleSubmit;

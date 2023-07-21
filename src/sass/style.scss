@@ -115,6 +115,7 @@ section.form-section {
       border: none;
       display: flex;
       flex-direction: column;
+      font-size: 1rem;
 
       .input-button {
         display: flex;
@@ -152,6 +153,7 @@ section.form-section {
       border: 1px solid #e5e7eb;
       height: 1.5rem;
       border-radius: 0.25rem;
+      font-family: inherit;
 
       &:focus {
         border-color: blue;
